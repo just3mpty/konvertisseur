@@ -1,0 +1,121 @@
+:root {
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+
+    color: var(--text);
+    background-color: var(--background);
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+
+    --background: #252422;
+    --text: #fffcf2;
+    --primary: #9c27b0;
+    --success: #00a6a6;
+    --error: #ff3b3b;
+    --warning: #ff9900;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px;
+    height: 100vh;
+
+    .separator {
+        height: 100%;
+        width: 2px;
+        background-color: #fffcf215;
+        border-radius: 10px;
+    }
+
+    section {
+        flex: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .folderSelection {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+    }
+
+    .formatSelection {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        select {
+            background: var(--background);
+            border: 1px solid var(--primary);
+            color: var(--text);
+            outline: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+    }
+
+    button {
+        background-color: var(--primary);
+        color: var(--text);
+        border: none;
+        outline: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .logs {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        overflow-y: auto;
+        height: 100%;
+        border: 1px solid #fffcf215;
+        border-radius: 5px;
+        padding: 5px;
+        color: var(--text);
+        font-size: 16px;
+        font-weight: 300;
+        transition: all 0.3s ease;
+    }
+
+    .quality {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .quality__controls {
+            display: flex;
+            gap: 10px;
+        }
+    }
+}
